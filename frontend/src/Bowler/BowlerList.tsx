@@ -30,12 +30,12 @@ function BowlerList() {
         </thead>
         <tbody>
           {bowlerData.map((b) => (
-            <tr key={b.BowlerId}>
-              <td>{b.BowlerId}</td>
-              <td>{b.BowlerFirstName}</td>
-              <td>{b.BowlerLastName}</td>
-              <td>{b.BowlerCity}</td>
-              <td>{b.BowlerState}</td>
+            <tr key={b.bowlerId}>
+              <td>{b.bowlerId}</td>
+              <td>{b.bowlerFirstName}</td>
+              <td>{b.bowlerLastName}</td>
+              <td>{b.bowlerCity}</td>
+              <td>{b.bowlerState}</td>
             </tr>
           ))}
         </tbody>

@@ -1,7 +1,7 @@
 export type Bowler = {
-  BowlerId: number;
-  BowlerFirstName: string;
-  BowlerLastName: string;
-  BowlerCity: string;
-  BowlerState: string;
+  bowlerId: number;
+  bowlerFirstName: string;
+  bowlerLastName: string;
+  bowlerCity: string;
+  bowlerState: string;
 };

@@ -1,4 +1,7 @@
 ﻿
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+
 namespace APIreact.Models
 {
     public class EFBowlingRepository : IBowlingRepository
@@ -7,6 +10,13 @@ namespace APIreact.Models
         public EFBowlingRepository(BowlingLeagueContext temp) {
             _bowlingContext = temp;
         }
-        public IEnumerable<Bowler> Bowlers => _bowlingContext.Bowlers;
+        //public IEnumerable<Bowler> Bowlers => _bowlingContext.Bowlers;
+        public IEnumerable<Bowler> GetBowlersForMarlinAndSharks()
+        {
+            return _bowlingContext.Bowlers
+                .Include(b => b.Team)
+                .Where(b => b.Team != null && (b.Team.TeamName == "Marlin" || b.Team.TeamName == "Sharks"))
+                .ToList();
+        }
     }
 }

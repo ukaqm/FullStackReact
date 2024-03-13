@@ -2,6 +2,6 @@
 {
     public interface IBowlingRepository
     {
-        IEnumerable<Bowler> Bowlers { get; }
+        IEnumerable<Bowler> GetBowlersForMarlinAndSharks();
     }
 }

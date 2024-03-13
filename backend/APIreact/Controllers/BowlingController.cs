@@ -9,16 +9,24 @@ namespace APIreact.Controllers
     public class BowlingController : ControllerBase
     {
         private IBowlingRepository _bowlingRepository;
-        public BowlingController(IBowlingRepository temp) {
+        public BowlingController(IBowlingRepository temp) 
+        {
             _bowlingRepository = temp;
         }
 
-        [HttpGet]
-        public IEnumerable<Bowler> Get()
-        {
-            var bowlingData = _bowlingRepository.Bowlers.ToArray();
+        //[HttpGet]
+        //public IEnumerable<Bowler> Get()
+        //{
+        //    var bowlingData = _bowlingRepository.Bowlers.ToArray();
+        //
+        //    return bowlingData;
+        //}
 
-            return bowlingData;
+        [HttpGet("marlins-sharks")]
+        public IActionResult GetBowlersForMarlinAndSharks() 
+        {
+            var bowlers = _bowlingRepository.GetBowlersForMarlinAndSharks();
+            return Ok(bowlers);
         }
     }
 }

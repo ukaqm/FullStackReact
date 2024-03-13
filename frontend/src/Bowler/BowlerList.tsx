@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Bowler } from '../types/Bowler';
+import { Team } from '../types/Team';
 
 function BowlerList() {
   const [bowlerData, setBowlerData] = useState<Bowler[]>([]);
@@ -26,6 +27,7 @@ function BowlerList() {
             <th>BowlerLastName</th>
             <th>BowlerCity</th>
             <th>BowlerState</th>
+            <th>TeamName</th>
           </tr>
         </thead>
         <tbody>
@@ -36,6 +38,7 @@ function BowlerList() {
               <td>{b.bowlerLastName}</td>
               <td>{b.bowlerCity}</td>
               <td>{b.bowlerState}</td>
+              <td>{b.team?.TeamName}</td>
             </tr>
           ))}
         </tbody>

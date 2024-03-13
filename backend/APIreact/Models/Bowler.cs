@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace APIreact.Models;
 
 public partial class Bowler
 {
+    [Key]
     public int BowlerId { get; set; }
 
     public string? BowlerLastName { get; set; }

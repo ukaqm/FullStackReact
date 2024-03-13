@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIreact")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38df003b6f4f5ceda1079c74ca1a6c94b4452059")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33e890b83c9774bf7bc24b289d2112368493c26d")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIreact")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIreact")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

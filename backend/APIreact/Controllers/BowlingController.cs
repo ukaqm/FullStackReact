@@ -23,9 +23,9 @@ namespace APIreact.Controllers
         //}
 
         [HttpGet("marlins-sharks")]
-        public IActionResult GetBowlersForMarlinAndSharks() 
+        public IActionResult GetBowlersForMarlinsAndSharks() 
         {
-            var bowlers = _bowlingRepository.GetBowlersForMarlinAndSharks();
+            var bowlers = _bowlingRepository.GetBowlersForMarlinsAndSharks();
             return Ok(bowlers);
         }
     }
